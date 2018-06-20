@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>注册</title>
+</head>
+
+<body>
+<center>
+<h1 style="margin-bottom:8%;">注册页面：</h1>
+<form action="register.php" method="post" name="form_register"
+    onsubmit="return check()" style="margin-top:10%; line-height:40px;"> 
+<table border="0" align="center" width="33%">
+    <tr><th>用户名：</th>
+    <td><input type="text" name="username" id="username"></td></tr> 
+    <tr><th>密&nbsp;码：</th>
+    <td><input type="password" name="password" id="password"></td></tr> 
+    <tr><th rowspan="2" valign="top">确认密码：</th>
+    <td height="44"><input type="password" name="assertpassword" id="assertpassword"></td></tr> 
+   <tr><td><input type="submit" value="注册">&nbsp;&nbsp;&nbsp;<input type="button" value="返回" onclick="javascript:history.go(-1)"></td></tr>
+  </table>
+  </form> 
+  </center>
+  <script type="text/javascript"> 
+    function check() { 
+      var username=document.getElementById("username").value; 
+      var password=document.getElementById("password").value; 
+      var assertpassword=document.getElementById("assertpassword").value;
+        
+      if(username.length < 3 || username.length > 8){
+         window.alert("用户名必须为3-8位"); 
+         return false; 
+        } 
+      if(password.length < 6 || password.length >10){
+		 alert("密码必须为6-10位"); 
+		 return false;
+		}
+      if(password!=assertpassword){ 
+        alert("两次密码不一致"); 
+        return false; 
+      } 
+    } 
+  </script> 
+</body>
+</html>

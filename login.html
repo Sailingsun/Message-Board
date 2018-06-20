@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登录</title>
+</head>
+
+<body>
+<center>
+<form action="login.php" method="post" onsubmit="return login()">
+    <h1 style="margin-bottom:10%;">登录页面：</h1>
+    <table border="0" width="33%" style="line-height:30px;">
+    <tr><th>用户名：</th>
+    <td><input type="text" name="username" id="username"></td><td width="45%">用户名必须为3-8位</td></tr> 
+    <tr><th>密&nbsp;码：</th>
+    <td><input type="password" name="password" id="password"></td><td>密码必须为6-10位</td></tr> 
+    <tr><th rowspan="2" valign="top">验证码：</th>
+    <td><input type="text" name="code" id="code"/></td>
+    <td width="10%"><img src="Code.php" onClick="this.src = 'Code.php?id='+Math.random()" />看不清,请点击图片</td></tr>
+    <td><pre><input type="submit" value="登录">           <input type="button" value="注册" onclick="register();"></pre></td>
+	</table>
+</form>
+</center>
+<script type="text/javascript"> 
+    function login() 
+    { 
+      var username=document.getElementById("username").value;
+      var password=document.getElementById("password").value;
+	  var code=document.getElementById("code").value;
+	  if(username.length < 3 || username.length > 8){    //判断用户名
+         window.alert("用户名必须为3-8位"); 
+         return false; 
+        } 
+      if(password.length < 6 || password.length >10){    //判断密码 
+		 alert("密码必须为6-10位"); 
+		 return false;
+		}
+      return true; 
+    } 
+    function register() 
+    { 
+      window.location.href="register.html";
+    } 
+</script> 
+</body> 
+</html> 
+</body>
+</html>

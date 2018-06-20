@@ -1,0 +1,42 @@
+
+
+<!------------index.php----------->首页含搜索分页(未登录状态)
+|
+|
+<!------------index1.php----------->首页含搜索分页(已登录状态)
+|
+|
+<!------------action.php----------->进行增删改查功能
+|
+|
+<!------------Code.php----------->验证码作图
+|
+|
+<!------------login.html+php----------->登录界面及其功能
+|
+|
+<!------------register.html+php----------->注册界面及其功能
+|
+|
+<!------------aliter1+2_password.php----------->修改密码界面及其功能
+|
+|
+<!------------edit.php----------->修改界面及其部分功能
+
+数据库名：messagedb;
+建库语句：
+| message | CREATE TABLE `message` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) NOT NULL,
+  `title` varchar(64) NOT NULL,
+  `content` text NOT NULL,
+  `addtime` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=utf8 |
+
+| login | CREATE TABLE `login` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 |
